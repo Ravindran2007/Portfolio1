@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <style>
+     /* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+  
+/* Navbar */
+header {
+  background: #333;
+  color: rgb(255, 255, 255);
+  padding: 2px 2px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 140px;
+  cursor: pointer;
+}
+
+    /* Hero Section */
+.hero {
+  background: linear-gradient(to right, #9911a3, #781094);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 span {
+  color: yellow;
+}
+
+.btn {
+  background: rgb(255, 255, 255);
+  color: #7e597b;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* skills section */
+.skills {
+  background: linear-gradient(to right, #fff);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero h1 span {
+  color: yellow;
+}
+
+.btn {
+  background: rgb(255, 255, 255);
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+/* About Section */
+    #about {
+        background: linear-gradient(to right, #fff);
+  
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 0px solid #5c1e77;
+    }
+/* skills Section */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .skill {
+      background: #6e3366;
+      color:#fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+/* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: #c88bc6;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: #0c0c0c;
+    }
+
+/* Contact Section */
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    #contact input, #contact textarea {
+      padding: 10px;
+      border: 1px solid #080708;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    #contact button {
+      padding: 12px;
+      background: #790985;
+      color: #f9f9f9;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    #contact button:hover {
+      background: #d18dd1;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+    <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Ravindran</span></h1>
+      <p>A passionate student learning web development</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+<h2>ABOUT ME</h2>
+    <img src="https://i.postimg.cc/jqv0ScQ0/Whats-App-Image-2025-08-19-at-16-50-50-d20d015e-removebg-preview-2.png" alt="Profile Photo">
+    <p> I am a student enthusiastic about technology and design. I love building
+        interactive, user-friendly web applications and exploring new tools in the tech world.</p>
+  </section>
+<!--skills section-->
+6  <section id="skills">
+    <h2 style="text-align:center; margin-bottom:20px;">Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Python</div>
+    </div>
+  </section>
+<!--project section-->
+  <section id="projects">
+    <h2 style="text-align:center; margin-bottom:20px;">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>portfolio website.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Student Management system.</p>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>Recipe Finder App.</p>
+      </div>
+    </div>
+  </section>
+<!--Content section-->
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom:20px;">Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+<!--Footer-->
+  <footer>
+    <p>&copy; 2025 Ravindran. All Rights Reserved.</p>
+  </footer>
+  <script>
+        // Toggle mobile menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Simple contact form validation
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (name && email && message) {
+    formStatus.textContent = "Message sent successfully!";
+    formStatus.style.color = "green";
+    contactForm.reset();
+  } else {
+    formStatus.textContent = "Please fill in all fields.";
+    formStatus.style.color = "red";
+  }
+});
+  </script>
+</body>
+</html>
